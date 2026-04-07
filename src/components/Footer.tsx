@@ -27,25 +27,25 @@ export default function Footer() {
     <footer className="w-full bg-gradient-to-t from-primary/[1%] to-transparent">
       <div className="container mx-auto flex flex-row items-center justify-between py-6">
       <Link
-          href="https://discord.com/users/1430976728041259218"
+          href="https://discord.com/users/517023479388700682"
           passHref
           className="text-xs text-muted-foreground hover:text-foreground"
         >
           <Button variant={"outline"}>
             <img src="/assets/discord.svg" className="h-4 w-4 md:mr-2" />
-            <span className="hidden md:flex">Elra Quinn</span>
+            <span className="hidden md:flex">Emma Smith</span>
           </Button>
         </Link>
         <span className="flex flex-row items-center space-x-4">
           <p className="text-xs text-muted-foreground">
             Designed & Developed by{" "}
             <Link
-              href="https://discord.com/users/1430976728041259218"
+              href="https://discord.com/users/517023479388700682"
               target="_blank"
               passHref
               className="text-foreground transition hover:text-primary"
             >
-              Elra Quinn
+              Emma Smith
             </Link>
           </p>
         </span>
