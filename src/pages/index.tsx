@@ -779,10 +779,408 @@ export default function Home() {
             <span className="text-gradient clash-grotesk text-xl font-semibold tracking-tighter">
               ✨ Video Editing
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="clash-grotesk text-gradient mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+              SHORT FORM CONTENT CREATION
+            </h2>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Roblox Short Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging Roblox short videos with eye-catching visuals,
+              helping content stand out and connect with the audience. Here are
+              some of my favorite projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {robloxProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Commentary Short Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging commentary short videos with eye-catching
+              visuals, helping content stand out and connect with the audience.
+              Here are some of my favorite projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {commentaryProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Talking Head Short Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging talking-head podcast short videos with
+              eye-catching visuals, helping content stand out and connect with
+              the audience. Here are some of my favorite projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {talkingHeadShortProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Skeleton Animation Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging real estate animations that showcase properties
+              in a visually appealing way, helping buyers and clients better
+              visualize spaces, features, and locations. Here are some of my
+              favorite real estate animation projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {skeletonProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Podcast Short Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging graphic designs for podcast short videos, using
+              eye-catching visuals to make content stand out and connect with
+              the audience. Here are some of my favorite projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {podcastProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Real Estate Animation Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create engaging real estate animations that showcase properties
+              in a visually appealing way, helping buyers and clients better
+              visualize spaces, features, and locations. Here are some of my
+              favorite real estate animation projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {realEstateProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              Map Animation Videos
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I design visually compelling map animations that bring geography
+              and stories to life, helping audiences easily understand
+              locations, routes, and global insights. Here are some of my
+              favorite map animation projects.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {mapProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/4">
+                      <Card id="title">
+                        <CardHeader className="p-6">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+
+            <h2 className="clash-grotesk text-gradient mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               LONG FORM CONTENT CREATION
             </h2>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               IRL Vlog Videos
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -843,7 +1241,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               Talking Head Videos
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -904,7 +1302,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               Faceless Documentary Videos
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -965,7 +1363,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               SAAS Product Launch Video
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1028,7 +1426,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               2D Animation
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1089,7 +1487,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               Gaming Videos
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1150,463 +1548,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              SHORT FORM CONTENT CREATION
-            </h2>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Roblox Short Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging Roblox short videos with eye-catching visuals,
-              helping content stand out and connect with the audience. Here are
-              some of my favorite projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {robloxProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Commentary Short Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging commentary short videos with eye-catching
-              visuals, helping content stand out and connect with the audience.
-              Here are some of my favorite projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {commentaryProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Talking Head Short Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging talking-head podcast short videos with
-              eye-catching visuals, helping content stand out and connect with
-              the audience. Here are some of my favorite projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {talkingHeadShortProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Skeleton Animation Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging real estate animations that showcase properties
-              in a visually appealing way, helping buyers and clients better
-              visualize spaces, features, and locations. Here are some of my
-              favorite real estate animation projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {skeletonProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Podcast Short Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging graphic designs for podcast short videos, using
-              eye-catching visuals to make content stand out and connect with
-              the audience. Here are some of my favorite projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {podcastProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Real Estate Animation Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create engaging real estate animations that showcase properties
-              in a visually appealing way, helping buyers and clients better
-              visualize spaces, features, and locations. Here are some of my
-              favorite real estate animation projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {realEstateProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              Map Animation Videos
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I design visually compelling map animations that bring geography
-              and stories to life, helping audiences easily understand
-              locations, routes, and global insights. Here are some of my
-              favorite map animation projects.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {mapProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/4">
-                      <Card id="title">
-                        <CardHeader className="p-6">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
-              2D Animated Banner For Social Media
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I create high impact 2D animated banners for platforms like
-              Discord and other social media, designed to capture attention and
-              strengthen brand identity. My work focuses on eye catching
-              visuals, smooth motion, and optimized designs tailored for digital
-              platforms.
-            </p>
-            <div className="mt-4">
-              <Carousel setApi={setCarouselApi} className="w-full">
-                <CarouselContent>
-                  {bannerProjects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/2">
-                      <Card id="tilt">
-                        <CardHeader className="p-0">
-                          {project.image.endsWith(".mp4") ? (
-                            <video
-                              src={project.image}
-                              muted
-                              controls
-                              preload="metadata"
-                              onLoadedData={(e) => {
-                                const video = e.currentTarget;
-                                video.currentTime = 0.5;
-                              }}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={600}
-                              height={300}
-                              quality={100}
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
-                          )}
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">
-                  {current} / {count}
-                </span>{" "}
-                projects
-              </div>
-            </div>
-
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="clash-grotesk text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               2D & 3D INTRO/OUTRO
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1666,11 +1608,11 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="clash-grotesk text-gradient mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               3D PROJECTS
             </h2>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               3D Environment Model
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1727,7 +1669,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
               3D Character Model
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -1754,6 +1696,64 @@ export default function Home() {
                                 video.currentTime = 0.5;
                               }}
                               className="h-[500px] w-[280px] rounded-md bg-primary object-cover"
+                            />
+                          ) : (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              width={600}
+                              height={300}
+                              quality={100}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                            />
+                          )}
+                        </CardHeader>
+                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter"></CardTitle>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="py-2 text-center text-sm text-muted-foreground">
+                <span className="font-semibold">
+                  {current} / {count}
+                </span>{" "}
+                projects
+              </div>
+            </div>
+            
+            <h2 className="text-gradient mt-3 text-2xl font-semibold tracking-tight tracking-tighter xl:text-4xl">
+              2D Animated Banner For Social Media
+            </h2>
+            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+              I create high impact 2D animated banners for platforms like
+              Discord and other social media, designed to capture attention and
+              strengthen brand identity. My work focuses on eye catching
+              visuals, smooth motion, and optimized designs tailored for digital
+              platforms.
+            </p>
+            <div className="mt-4">
+              <Carousel setApi={setCarouselApi} className="w-full">
+                <CarouselContent>
+                  {bannerProjects.map((project) => (
+                    <CarouselItem key={project.title} className="md:basis-1/2">
+                      <Card id="tilt">
+                        <CardHeader className="p-0">
+                          {project.image.endsWith(".mp4") ? (
+                            <video
+                              src={project.image}
+                              muted
+                              controls
+                              preload="metadata"
+                              onLoadedData={(e) => {
+                                const video = e.currentTarget;
+                                video.currentTime = 0.5;
+                              }}
+                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
                             />
                           ) : (
                             <Image

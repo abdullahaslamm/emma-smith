@@ -176,7 +176,7 @@ export default function Container(props: ContainerProps) {
           </button>
         </div>
         <Link href="/">
-          <span className="text-lg font-semibold">Emma Smith</span>
+          <span className="clash-grotesk text-gradient text-lg font-semibold ">Emma Smith</span>
         </Link>
 
         {/* Desktop menu */}
