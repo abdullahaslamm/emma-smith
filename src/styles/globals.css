@@ -99,8 +99,16 @@
   }
 
   .nav-active {
-    color: hsl(330 85% 65%) !important;
     @apply text-sm lowercase tracking-tight;
+
+    background: linear-gradient(
+      135deg,
+      hsl(32 100% 55%),
+      hsl(330 85% 65%),
+      hsl(25 100% 75%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* ensures gradient works in WebKit */
   }
 
   .nav-link {

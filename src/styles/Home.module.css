@@ -9,9 +9,15 @@
 }
 
 .pill:hover {
-  background-color: hsl(330 85% 65%); /* pink */
+  background: linear-gradient(
+    135deg,
+    hsl(32 100% 55%),
+    hsl(330 85% 65%),
+    hsl(25 100% 75%)
+  ); /* pink gradient */
   color: white;
   transform: translateY(-4px);
+  transition: all 0.3s ease; /* optional: smooth hover */
 }
 
 .intro h1 {
