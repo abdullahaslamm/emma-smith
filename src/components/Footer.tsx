@@ -26,16 +26,17 @@ export default function Footer() {
   return (
     <footer className="w-full bg-gradient-to-t from-primary/[1%] to-transparent">
       <div className="container mx-auto flex flex-row items-center justify-between py-6">
-      <Link
-          href="https://discord.com/users/517023479388700682"
+        <Link
+          href="mailto:emmasmith@depixstudio.com"
           passHref
           className="text-xs text-muted-foreground hover:text-foreground"
         >
           <Button variant={"outline"}>
-            <img src="/assets/discord.svg" className="h-4 w-4 md:mr-2" />
-            <span className="hidden md:flex">Emma Smith</span>
+            <MailIcon className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:flex">emmasmith@depixstudio.com</span>
           </Button>
         </Link>
+
         <span className="flex flex-row items-center space-x-4">
           <p className="text-xs text-muted-foreground">
             Designed & Developed by{" "}
@@ -50,13 +51,13 @@ export default function Footer() {
           </p>
         </span>
         <Link
-          href="mailto:elaraquinn@depixstudio.com"
+          href="https://discord.com/users/517023479388700682"
           passHref
           className="text-xs text-muted-foreground hover:text-foreground"
         >
           <Button variant={"outline"}>
-            <MailIcon className="h-4 w-4 md:mr-2" />
-            <span className="hidden md:flex">elaraquinn@depixstudio.com</span>
+            <img src="/assets/discord.svg" className="h-4 w-4 md:mr-2" />
+            <span className="hidden md:flex">Emma Smith</span>
           </Button>
         </Link>
       </div>

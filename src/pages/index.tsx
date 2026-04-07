@@ -694,7 +694,7 @@ export default function Home() {
               className="flex flex-row items-center space-x-1.5 pt-2"
             >
               <Link
-                href="https://discord.com/users/1430976728041259218"
+                href="https://discord.com/users/517023479388700682"
                 passHref
               >
                 <Button>
@@ -1851,7 +1851,7 @@ export default function Home() {
               I&apos;m currently available for freelance work and open to
               discussing new projects.
             </p>
-            <Link href="https://discord.com/users/1430976728041259218" passHref>
+            <Link href="https://discord.com/users/517023479388700682" passHref>
               <Button className="mt-6">Get in touch</Button>
             </Link>
           </div>
