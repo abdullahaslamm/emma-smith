@@ -1,7 +1,9 @@
 /* navbar */
 .nav {
   @apply fixed top-0 z-40 flex w-full flex-row items-center justify-between px-[1rem] py-8 2xl:px-[17rem];
+  background: transparent;
 }
+
 .nav .desktop-nav {
   @apply hidden items-center space-x-5 text-center sm:flex;
 }
@@ -10,12 +12,16 @@
 .burger-button {
   @apply inline-flex transform items-center justify-center rounded-md p-2 transition-all duration-300 focus:outline-none;
 }
+
 .burger {
   @apply relative h-40 w-40 border-0 bg-transparent transition-opacity duration-300;
 }
+
 .burger svg {
-  @apply top-1/2 left-1/2 translate-x-[200%] -translate-y-[38%] scale-100 transform opacity-100 transition-opacity transition-transform duration-300 duration-300;
+  color: hsl(25 100% 75%); /* peach icon */
+  @apply top-1/2 left-1/2 translate-x-[200%] -translate-y-[38%] scale-100 transform opacity-100 transition-opacity transition-transform duration-300;
 }
+
 .burger svg[data-hide="true"] {
   @apply -translate-x-[50%] -translate-y-[50%] scale-0 transform opacity-0;
 }
@@ -30,8 +36,8 @@
   position: fixed;
   z-index: 99;
 
-  /* background changed to pinkish purple */
-  background-color: hsl(290 50% 15%);
+  /* dark warm background */
+  background-color: hsl(15 35% 10%);
 
   svg {
     position: absolute;
@@ -40,14 +46,14 @@
     height: calc(100% + 300px);
 
     path {
-      /* svg fill matches background */
-      fill: hsl(290 50% 15%);
+      /* match background */
+      fill: hsl(15 35% 10%);
     }
   }
 
   p {
     display: flex;
-    color: hsl(290 30% 95%); /* light text for contrast */
+    color: hsl(20 30% 95%);
     font-size: 42px;
     align-items: center;
     position: absolute;
@@ -57,8 +63,9 @@
       display: block;
       width: 10px;
       height: 10px;
-      /* light accent dots */
-      background-color: hsl(320 80% 70%);
+
+      /* accent dots */
+      background-color: hsl(32 100% 55%); /* orange */
       border-radius: 50%;
       margin-right: 10px;
     }
